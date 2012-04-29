@@ -1,0 +1,224 @@
+/*CSS*/
+
+/* Eric Meyer's Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v2.0 | 20110126 */
+/* License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Emily Ellison*/
+
+.content {
+	font-family:arial;
+	padding:10px 200px;
+  background: white;
+  background: -moz-linear-gradient(bottom, white, ghostwhite);
+  background: -ms-linear-gradient(bottom, white, ghostwhite);
+  background: -o-linear-gradient(bottom, white, ghostwhite);
+  background: -webkit-linear-gradient(bottom, white, ghostwhite);
+  background: linear-gradient(bottom, white, ghostwhite);
+}
+
+nav {
+	font-family:arial;
+	font-size:30px;
+	font-weight:bold;
+	h1 {
+	  background: chocolate;
+	  background: -moz-linear-gradient(top, chocolate, sienna);
+	  background: -ms-linear-gradient(top, chocolate, sienna);
+	  background: -o-linear-gradient(top, chocolate, sienna);
+	  background: -webkit-linear-gradient(top, chocolate, sienna);
+	  background: linear-gradient(top, chocolate, sienna);
+	  border: 1px solid firebrick;
+		padding:10px 200px;
+		color:white;
+		height:30px;
+	}
+	.site_name {
+		float:left;
+	}
+	.menu, a {
+		float:right;
+		color:white;
+		text-decoration:none;
+	}
+}
+
+h2 {
+	font-size:25px;
+	font-weight:bold;
+	padding:10px 0px 10px 0px;
+}
+
+h3 {
+	font-size:20px;
+	font-weight:bold;
+	padding:10px 0px 10px 0px;
+}
+
+form {
+  border: 1px solid lightgrey;
+  background: ghostwhite;
+
+  border-radius: 8px;
+  padding: 20px;
+  width: 600px;
+	input, label, select {
+		display:block;
+		padding: 3px 0px 3px 0px;
+		font-size:15px;
+		width:300px;
+	}
+	input {
+		border: 1px solid lightgrey;
+		border-radius:4px;
+		padding:0px 0px;
+	}
+	label {
+		font-weight:bold;
+	}
+	.submit {
+		padding:5px 0px;
+	  background: chocolate;
+	  background: -moz-linear-gradient(top, chocolate, sienna);
+	  background: -ms-linear-gradient(top, chocolate, sienna);
+	  background: -o-linear-gradient(top, chocolate, sienna);
+	  background: -webkit-linear-gradient(top, chocolate, sienna);
+	  background: linear-gradient(top, chocolate, sienna);
+	  border: 1px solid firebrick;
+		color:white;
+	}
+	select {
+	  width: 200px;
+	  font-size: 15px;
+	  border: 1px solid lightgrey;
+	  padding:5px 5px;
+		background:white;
+	}
+	.check-boxes {
+		label, input {
+			width: 6em;
+		  margin-right: 0px;
+		  float: left;
+		  display: inline;
+		}
+	}
+}
+table {
+	font-size:20px;
+  border: 1px solid firebrick;
+	width:900px;
+	th {
+	  background: chocolate;
+	  background: -moz-linear-gradient(top, chocolate, sienna);
+	  background: -ms-linear-gradient(top, chocolate, sienna);
+	  background: -o-linear-gradient(top, chocolate, sienna);
+	  background: -webkit-linear-gradient(top, chocolate, sienna);
+	  background: linear-gradient(top, chocolate, sienna);
+		font-weight:bold;
+		color:white;
+		text-align:left;
+		padding:10px 10px;
+	}
+	td {
+		padding:10px 10px;
+		background: white;
+	  background: -moz-linear-gradient(top, white, ghostwhite);
+	  background: -ms-linear-gradient(top, white, ghostwhite);
+	  background: -o-linear-gradient(top, white, ghostwhite);
+	  background: -webkit-linear-gradient(top, white, ghostwhite);
+	  background: linear-gradient(top, white, ghostwhite);
+	}
+	a {
+		text-decoration:none;
+		color:steelblue;
+	}
+}
+.error-number {
+	font-size:18px;
+	font-weight:bold;
+	color:firebrick;
+	padding:0px 0px 10px 0px;
+}
+.error-messages {
+	padding:0px 0px 10px 0px;
+	li {
+		color:firebrick;
+		padding:3px 0px 3px;
+	}
+}
+/*
+div label input {
+   margin-right:100px;
+}
+#ck-button {
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:left;
+}
+#ck-button label {
+    float:left;
+    width:4.0em;
+}
+#ck-button label span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+}
+#ck-button label input {
+    position:absolute;
+    top:-20px;
+}
+#ck-button input:checked + span {
+    background-color:#911;
+    color:#fff;
+}
+*/
