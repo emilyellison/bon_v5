@@ -1,0 +1,24 @@
+<h2>Available Beers</h2>
+<br/>
+<table>
+	<tr>
+		<th>Beer</th>
+		<th>Brewer</th>
+		<th>Location</th>
+		<th>Edit</th>
+		<th>Destroy</th>
+	</tr>
+	<% @beers.each do |beer| %>
+	<tr>
+			<td><a href='/<%= beer.id %>'><%= beer.name %></a></td>
+			<td><%= beer.brewer %></a></td>
+			<td><%= beer.city %>, <%= beer.state %></td>
+			<td><a href='/<%= beer.id %>/edit'>Edit</a></td>
+			<td><%= link_to 'Delete',
+			 				"/#{beer.id}",
+							:method => :delete,
+							:confirm => 'Sure about that?' %></td>
+	</tr>
+	<% end %>	
+
+</table>	

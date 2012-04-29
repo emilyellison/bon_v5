@@ -1,0 +1,12 @@
+<% if @beer.errors.any? %>
+	<div class='error-number'>
+		Whoops! You've got <%= pluralize(@beer.errors.count, 'error') %>.
+	</div>
+	<div class='error-messages'>
+		<ul>
+		<% @beer.errors.full_messages.each do |message| %>
+			<li>* <%= message %></li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>
