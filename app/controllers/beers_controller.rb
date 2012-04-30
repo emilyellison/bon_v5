@@ -26,7 +26,7 @@ class BeersController < ApplicationController
                :spicy => @beer.spicy, :tart => @beer.tart, :citrus => @beer.citrus,
                :creamy => @beer.creamy, :vanilla => @beer.vanilla, :acidic => @beer.acidic,
                :smoky => @beer.smoky, :cloves => @beer.cloves, :crisp => @beer.crisp,
-               :rich => @beer.rich }
+               :rich => @beer.rich, :coffee => @beer.coffee }
   end
   
   def edit
