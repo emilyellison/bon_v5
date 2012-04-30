@@ -152,7 +152,7 @@ form {
 table {
 	font-size:20px;
   border: 1px solid firebrick;
-	width:900px;
+	width:1000px;
 	th {
 	  background: chocolate;
 	  background: -moz-linear-gradient(top, chocolate, sienna);
@@ -196,6 +196,11 @@ table {
 	font-size:18px;
 	list-style: circle inside;
 	padding:8px 0px 8px;
+}
+.edit {
+	text-decoration:none;
+	color:steelblue;
+	font-size:18px;
 }
 /*
 div label input {
