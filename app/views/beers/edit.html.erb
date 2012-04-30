@@ -2,6 +2,8 @@
 
 <%= form_for(@beer, :url => "/#{@beer.id}", :method => :put) do |f| %>
 
+	<%= render 'shared/error_messages' %>
+
 	<%= f.label :name %>
 	<%= f.text_field :name %>
 	

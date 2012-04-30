@@ -19,6 +19,7 @@ class BeersController < ApplicationController
   
   def show
     @beer = Beer.find_by_id(params[:id])
+    @chars = { :sweet => @beer.sweet, :bitter => @beer.bitter, :sour => @beer.sour }
   end
   
   def edit
@@ -30,7 +31,7 @@ class BeersController < ApplicationController
     if @beer.update_attributes(params[:beer])
       redirect_to "/#{@beer.id}"
     else 
-      render "/#{@beer.id}/edit"
+      redirect_to "/#{@beer.id}/edit"
     end
   end
   
