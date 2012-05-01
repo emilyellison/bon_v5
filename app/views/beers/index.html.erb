@@ -2,13 +2,13 @@
 <br/>
 <%= form_tag '/', :method => :get do %>
 
-<%= label_tag 'Search by Beer' %>
+<%= label_tag 'Beer' %>
 <%= text_field_tag :name_query %>
 <br/>
-<%= label_tag 'Search by Brewer' %>
+<%= label_tag 'Brewer' %>
 <%= text_field_tag :brewer_query %>
 <br/>
-<%= submit_tag 'Submit', class: 'submit' %>
+<%= submit_tag 'Search', class: 'submit' %>
 
 <% end %>
 <br/>
