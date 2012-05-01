@@ -9,4 +9,27 @@ class Beer < ActiveRecord::Base
   validates :country, :presence => { :message => 'must not be blank.' }
   validates_acceptance_of :eula
   
+  def self.search(name_query, brewer_query)
+    
+    if !name_query.blank? && !brewer_query.blank?
+      find(:all, 
+           :conditions => ['UPPER(name) LIKE ? AND UPPER(brewer) LIKE ?', 
+           "%#{name_query.upcase}%", "%#{brewer_query.upcase}%"], 
+           :order => 'name asc' )
+    elsif !name_query.blank?
+      find(:all, 
+           :conditions => ['UPPER(name) LIKE ?', 
+           "%#{name_query.upcase}%"], 
+           :order => 'name asc' )
+    elsif !brewer_query.blank?
+      find(:all, 
+           :conditions => ['UPPER(brewer) LIKE ?', 
+           "%#{brewer_query.upcase}%"], 
+           :order => 'brewer asc' )
+    else
+      find(:all, :order => 'name asc')
+    end
+    
+  end
+  
 end

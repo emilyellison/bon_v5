@@ -1,7 +1,8 @@
 class BeersController < ApplicationController
   
   def index
-    @beers = Beer.all
+   
+    @beers = Beer.search(params[:name_query], params[:brewer_query])
   end
   
   def new

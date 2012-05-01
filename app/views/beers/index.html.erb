@@ -1,4 +1,16 @@
-<h2>Available Beers</h2>
+<h2>Find Your Favorite Beers</h2>
+<br/>
+<%= form_tag '/', :method => :get do %>
+
+<%= label_tag 'Search by Beer' %>
+<%= text_field_tag :name_query %>
+<br/>
+<%= label_tag 'Search by Brewer' %>
+<%= text_field_tag :brewer_query %>
+<br/>
+<%= submit_tag 'Submit', class: 'submit' %>
+
+<% end %>
 <br/>
 <table>
 	<tr>
@@ -6,7 +18,7 @@
 		<th>Brewer</th>
 		<th>Location</th>
 		<th>Edit</th>
-		<th>Destroy</th>
+		<th>Delete</th>
 	</tr>
 	<% @beers.each do |beer| %>
 	<tr>
